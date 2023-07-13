@@ -37,7 +37,7 @@
       <!-- Pills content -->
       <div class="tab-content">
         <div class="tab-pane fade" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-          <form>
+          <form method="POST">
             <div class="text-center mb-3">
               <p>Sign in with:</p>
               <button type="button" class="btn btn-secondary btn-floating mx-1">
@@ -100,8 +100,8 @@
           </form>
         </div>
         <div class="tab-pane fade active show" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-          <form>
-            <div class="text-center mb-3">
+          <form id="form-register" method="POST"  > 
+          <div class="text-center mb-3">
               <p>Sign up with:</p>
               <button type="button" class="btn btn-secondary btn-floating mx-1">
                 <i class="fab fa-facebook-f"></i>
@@ -121,47 +121,55 @@
             </div>
 
             <p class="text-center">or:</p>
+              <!-- Name input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="registerName" class="form-control">
+                <label class="form-label" for="registerName" style="margin-left: 0px;">Name</label>
+              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
 
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="registerName" class="form-control">
-              <label class="form-label" for="registerName" style="margin-left: 0px;">Name</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
+              <!-- Username input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="registerUsername" class="form-control">
+                <label class="form-label" for="registerUsername" style="margin-left: 0px;">Username</label>
+              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 66.4px;"></div><div class="form-notch-trailing"></div></div></div>
 
-            <!-- Username input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="registerUsername" class="form-control">
-              <label class="form-label" for="registerUsername" style="margin-left: 0px;">Username</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 66.4px;"></div><div class="form-notch-trailing"></div></div></div>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="registerEmail" class="form-control">
+                <label class="form-label" for="registerEmail" style="margin-left: 0px;">Email</label>
+              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
 
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="registerEmail" class="form-control">
-              <label class="form-label" for="registerEmail" style="margin-left: 0px;">Email</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 40px;"></div><div class="form-notch-trailing"></div></div></div>
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="registerPassword" class="form-control">
+                <label class="form-label" for="registerPassword" style="margin-left: 0px;">Password</label>
+              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" id="registerPassword" class="form-control">
-              <label class="form-label" for="registerPassword" style="margin-left: 0px;">Password</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+              <!-- genero seleccion radio -->
+              <div class=" d-flex justify-content-center mb-4">
 
-            <!-- Repeat Password input -->
-            <div class="form-outline mb-4">
-              <input type="password" id="registerRepeatPassword" class="form-control">
-              <label class="form-label" for="registerRepeatPassword" style="margin-left: 0px;">Repeat password</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 106.4px;"></div><div class="form-notch-trailing"></div></div></div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input ipt-radio-register" type="radio" value="1" name="inlineRadioOptions" id="inlineRadio1" />
+                  <label class="form-check-label" for="inlineRadio1">masculino</label>
+                </div>
 
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
-              <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked="" aria-describedby="registerCheckHelpText">
-              <label class="form-check-label" for="registerCheck">
-                I have read and agree to the terms
-              </label>
-            </div>
+                <div class="form-check form-check-inline ">
+                  <input class="form-check-input ipt-radio-register" type="radio" value="2" name="inlineRadioOptions" id="inlineRadio2" />
+                  <label class="form-check-label" for="inlineRadio2">femenino</label>
+                </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-3">Sign up</button>
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked="" aria-describedby="registerCheckHelpText">
+                <label class="form-check-label" for="registerCheck">
+                  I have read and agree to the terms
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" id="form-register-btn" class="btn btn-primary btn-block mb-3">Sign up</button>
           </form>
         </div>
       </div>
@@ -169,55 +177,31 @@
     </div>
   </section>
 
+
+
   <button class="btn btn-primary" type="button" data-mdb-toggle="offcanvas" data-mdb-target="#offcanvasTop"
   aria-controls="offcanvasTop">Registrados</button>
 
-<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+<div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
     <h5 id="offcanvasTopLabel">Offcanvas top</h5>
     <button type="button" class="btn-close text-reset" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <table class="table align-middle">
+    <table class="table align-middle table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Lorem</th>
-            <th scope="col">Ipsum</th>
-            <th scope="col">Dolor</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">User</th>
+            <th scope="col">Email</th>
+            <th scope="col">password</th>
+            <th scope="col">sexo</th>
+
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Sit</td>
-            <td>Amet</td>
-            <td>
-              <button type="button" class="btn btn-link btn-sm px-3" data-ripple-color="dark">
-                <i class="fas fa-times"></i>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Adipisicing</td>
-            <td>Elit</td>
-            <td>
-              <button type="button" class="btn btn-link btn-sm px-3" data-ripple-color="dark">
-                <i class="fas fa-times"></i>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Hic</td>
-            <td>Fugiat</td>
-            <td>
-              <button type="button" class="btn btn-link btn-sm px-3" data-ripple-color="dark">
-                <i class="fas fa-times"></i>
-              </button>
-            </td>
-          </tr>
+        <tbody class="t-body">
+
         </tbody>
       </table>
 
@@ -228,7 +212,7 @@
     type="text/javascript" 
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js">
 </script>
-<script src="index.js"></script>
+<script src="index.js" type="module"></script>
 </body>
 </html>
 
